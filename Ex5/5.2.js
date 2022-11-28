@@ -19,4 +19,18 @@ function askTvSerie()
     }
     return myObject;
 }
-console.log(askTvSerie())
+let tvSerie=askTvSerie()
+function randomizeCast(tvSerie){
+    list_cast=tvSerie["cast"]
+    l=list_cast.length
+    randomlist=[]
+    for(i=1;i<=l;i++){
+        random=Math.floor(Math.random()*l);
+        while (randomlist.includes(list_cast[random])){
+            random=Math.floor(Math.random()*l);
+        }
+        randomlist.push(list_cast[random]);
+    }
+    return randomlist
+}
+console.log(randomizeCast(tvSerie))
