@@ -4,11 +4,9 @@ function picklearner(inputAr , n ){
     let l = inputAr.length;
     let arr=[];
     let random;
-        for(i=0;i<n;i++);
-        {
+        for(i=0;i<n;i++){
             random = Math.floor(Math.random()*l);
-            while(arr.includes(inputAr[random]));
-            {
+            while(arr.includes(inputAr[random])){
                 random = Math.floor(Math.random()*l);
         }
             arr.push(inputAr[random]);
